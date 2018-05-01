@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.lloyd.Ukite.ChildActivity">
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="windrichting:"
-        />
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
 
-</RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_view_location_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Location: "
+            android:textColor="@android:color/black"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/image_wind_detail"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+
+
+            android:layout_alignLeft="@+id/text_view_location_detail"
+            android:layout_alignStart="@+id/text_view_location_detail"
+            android:layout_below="@+id/text_view_location_detail"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/image_swell_detail"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            android:layout_toEndOf="@id/image_wind_detail"
+            android:layout_toRightOf="@id/image_wind_detail"
+            android:layout_below="@+id/text_view_location_detail"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/text_view_speed_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_view_direction_detail"
+            android:layout_alignStart="@+id/text_view_direction_detail"
+            android:layout_below="@+id/text_view_direction_detail"
+            android:text="Windspeed: "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/text_view_direction_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_view_location_detail"
+            android:layout_alignStart="@+id/text_view_location_detail"
+            android:layout_below="@+id/image_wind_detail"
+            android:text="Winddirection: "
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/text_view_temp_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_view_speed_detail"
+            android:layout_alignStart="@+id/text_view_speed_detail"
+            android:layout_below="@+id/text_view_speed_detail"
+            android:text="Temperature: "
+            android:textSize="30sp" />
+    </RelativeLayout>

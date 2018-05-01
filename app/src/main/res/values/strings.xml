@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Ukite</string>
-    <string name="search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="Search">Search</string>
+    <string name="title_detail_activity">Detail</string>
+    <string name="pref_night_mode_key" translatable="false">night_mode</string>
+
 </resources>

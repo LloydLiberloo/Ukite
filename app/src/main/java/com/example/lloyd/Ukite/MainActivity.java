@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements LocationListAdapt
         mRecyclerView = findViewById(id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mCardView = findViewById(id.cardview);
+        mCardView = findViewById(id.cardView);
         mLocationList = new ArrayList<>();
 
         mRequestQueue = Volley.newRequestQueue(this);
@@ -75,16 +75,16 @@ public class MainActivity extends AppCompatActivity implements LocationListAdapt
 
     private void setupSharedPreferences() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        //setDarkMode(sharedPreferences.getBoolean(getString(string.pref_night_mode_key), false));
+        setDarkMode(sharedPreferences.getBoolean(getString(string.pref_night_mode_key), false));
         sharedPreferences.registerOnSharedPreferenceChangeListener(this);
     }
 
     public void setDarkMode(boolean b){
         if(b){
-            mCardView.setCardBackgroundColor(Color.GRAY);
+            mRecyclerView.setBackgroundColor(Color.BLACK);
         }
         else{
-            mCardView.setCardBackgroundColor(Color.WHITE);
+            mRecyclerView.setBackgroundColor(Color.DKGRAY);
         }
     }
 
